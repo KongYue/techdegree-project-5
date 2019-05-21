@@ -1,0 +1,48 @@
+/* =================================
+  Base Element Styles
+==================================== */
+* {
+  box-sizing: border-box;
+  font-family: "Open sans", Verdana, Geneva, Tahoma, sans-serif;
+}
+.main {
+  text-align: center;
+}
+.searchbar {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+.searchbar input {
+  width: 90%;
+  height: 3em;
+}
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 97%;
+  margin: auto;
+  /* margin: 3em, auto; */
+}
+
+.lightbox {
+  margin-top: 50%;
+}
+
+.list li {
+  flex-grow: 1;
+}
+
+@media (min-width: 768px) {
+  .searchbar input {
+    width: 70%;
+  }
+  .list {
+    width: 85%;
+  }
+  .lightbox {
+    margin-top: 0;
+  }
+}
