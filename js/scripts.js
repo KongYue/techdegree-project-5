@@ -27,25 +27,25 @@ lightbox.option({
 // set global scoop for entire lis that contain all the name ,title and captions, because this is also
 // used for people search by delete charactor
 
-var entire_li = $(".list li");
+const entire_li = $(".list li");
 
 // keyup -The keyup event occurs when a keyboard key is released
 
 $(".searchbar input").keyup(function() {
-  var type_input = $(this)
+  let type_input = $(this)
     .val()
     .toLowerCase();
-  var response_result = search_result(type_input);
+  let response_result = search_result(type_input);
   $(".list").html(response_result.join(""));
 });
 
 // This function user provide input value, will return an array including all the match li html element.
 
 function search_result(input) {
-  var return_results = [];
+  let return_results = [];
   entire_li.each(function() {
-    var caption = $(this).attr("data-value");
-    var checkresult = caption.toLowerCase().indexOf(input);
+    let caption = $(this).attr("data-value");
+    let checkresult = caption.toLowerCase().indexOf(input);
     if (checkresult == -1) {
       return_results.push("");
     } else {
